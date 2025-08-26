@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- tailwind and daisy ui cdn -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- font-awesome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- style file added -->
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Emergency Hotline</title>
+  </head>
+  <body class="bg-[#41FF6B]/10">
+    <!-- header area start here ... -->
+    <header>
+      <nav
+        class="flex items-center justify-between max-w-[1800px] mx-auto py-7 bg-white"
+      >
+        <figure>
+          <img src="./assets/Logo (2).svg" alt="main_logo" />
+        </figure>
+        <section class="flex gap-7">
+          <div class="flex gap-2 bg-[#41FF6B]/10 px-8 py-3 rounded-[50px]">
+            <span class="font-bold">0</span>
+            <img src="./assets/heart.png" alt="Life" width="23px" />
+          </div>
+          <div class="flex gap-2 bg-[#41FF6B]/10 px-8 py-3 rounded-[50px]">
+            <span class="font-bold">100</span>
+            <img src="./assets/coin.png" alt="coin" width="23px" />
+          </div>
+          <div class="bg-[#00A63E] px-8 py-3 text-white rounded-[50px]">
+            <h3><span>2</span> Copy</h3>
+          </div>
+        </section>
+      </nav>
+      <section
+        class="flex flex-col text-white items-center justify-center py-5 bg-gradient-to-r from-[#013223] via-[#006747] via-50% to-[#013223] to-100%"
+      >
+        <img src="./assets/logo-dark.png" alt="logo" width="92px" />
+        <h1 class="text-[40px] font-bold">Emergency Service Directory</h1>
+        <p class="text-xl">
+          Government Emergency Services at Your Fingertip – A Project by
+          Government of the People’s Republic of Bangladesh
+        </p>
+      </section>
+    </header>
+    <!-- main area / card area start here  -->
+    <main class="max-w-[1800px] mx-auto grid grid-cols-12">
+      <!-- all cart container  -->
+      <section
+        class="card_container pt-22 pb-14 col-span-9 grid grid-cols-3 gap-8"
+      >
+        <!-- single cart here ... -->
+        <div class="bg-white p-8 rounded-xl drop-shadow-md">
+          <div class="flex justify-between items-center">
+            <div class="bg-[#FFE3E2] p-3 rounded-2xl">
+              <img src="./assets/emergency.png" alt="emergency" width="32px" />
+            </div>
+            <span><i class="fa-regular fa-heart"></i></span>
+          </div>
+          <h3 class="text-2xl font-bold mt-4">National Emergency Number</h3>
+          <p class="text-[18px] text-gray-500">National Emergency</p>
+          <h4 class="text-4xl font-semibold mt-6 mb-1">999</h4>
+          <div class="bg-gray-200 inline px-4 py-2 rounded-2xl">
+            <span class="text-gray-500">All</span>
+          </div>
+          <div class="mt-8 flex gap-2">
+            <button
+              class="border-2 border-gray-200 py-2.5 px-14 rounded-[8px] flex items-center gap-2 cursor-pointer"
+            >
+              <i class="fa-regular fa-copy"></i>Copy
+            </button>
+            <button
+              class="bg-green-600 py-2.5 px-15 rounded-[8px] flex items-center gap-2 text-white cursor-pointer"
+            >
+              <i class="fa-solid fa-phone"></i>Call
+            </button>
+          </div>
+        </div>
+      </section>
+      <aside class="col-span-3"></aside>
+    </main>
+  </body>
+</html>
