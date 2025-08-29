@@ -29,4 +29,25 @@ document
       document.getElementById('red_heart').innerText = totalHeart;
       document.getElementById('red_heart_mobile').innerText = totalHeart;
     }
+
+    // Call History added
+    const target = e.target;
+    const cartTitle = target.parentNode.parentNode.children[1].innerText;
+    const cartEmargency = target.parentNode.parentNode.children[3].innerText;
+
+    if (e.target.className.includes('cart_btn')) {
+      const historyContainer = document.getElementById('history_container');
+      const createDiv = document.createElement('div');
+      createDiv.innerHTML = `
+        <div class="flex bg-gray-100 p-5 rounded-xl items-center justify-between w-3/3">
+            <div>
+              <h3 class="text-[18px] font-semibold">${cartTitle}</h3>
+              <h3 class="text-lg">${cartEmargency}</h3>
+            </div>
+            <p class="text-sm text-gray-500">${getCurrentTimeString()}</p>
+          </div>
+        `;
+      historyContainer.append(createDiv);
+      alert(`\u{1F4DE}calling ${cartTitle} ${cartEmargency}...`);
+    }
   });
