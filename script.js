@@ -41,6 +41,14 @@ document
     const cartEmargency = target.parentNode.parentNode.children[3].innerText;
 
     if (e.target.className.includes('cart_btn')) {
+      const totalCoin = document.getElementById('coins').innerText;
+      if (totalCoin < 20) {
+        alert('⚠️ Not enough coins to make a call!');
+        return;
+      }
+      const remainCoin = Number(totalCoin) - 20;
+      document.getElementById('coins').innerText = remainCoin;
+
       const historyContainer = document.getElementById('history_container');
       const createDiv = document.createElement('div');
       createDiv.innerHTML = `
@@ -53,6 +61,7 @@ document
           </div>
         `;
       historyContainer.append(createDiv);
+
       alert(`\u{1F4DE}calling ${cartTitle} ${cartEmargency}...`);
     }
 
@@ -62,6 +71,7 @@ document
       const countCopy = Number(button) + 1;
 
       document.getElementById('copy').innerText = countCopy;
+      document.getElementById('copy_mobile').innerText = countCopy;
 
       // copy text
       const text = target.parentNode.parentNode.children[3].innerText;
