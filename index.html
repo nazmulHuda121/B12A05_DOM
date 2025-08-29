@@ -48,7 +48,7 @@
             <img src="./assets/coin.png" alt="coin" width="23px" />
           </div>
           <div class="bg-[#00A63E] px-8 py-3 text-white rounded-[50px]">
-            <h3><span>2</span> Copy</h3>
+            <h3><span id="copy">0</span> Copy</h3>
           </div>
         </section>
 
@@ -65,7 +65,7 @@
           class="hidden absolute top-full left-0 w-full bg-white shadow-md p-5 flex-col gap-5 lg:hidden"
         >
           <div class="flex gap-2 bg-[#41FF6B]/10 px-8 py-3 rounded-[50px]">
-            <span class="font-bold" id="red_heart">0</span>
+            <span class="font-bold" id="red_heart_mobile">0</span>
             <img src="./assets/heart.png" alt="Life" width="23px" />
           </div>
           <div class="flex gap-2 bg-[#41FF6B]/10 px-8 py-3 rounded-[50px] my-5">
@@ -73,7 +73,7 @@
             <img src="./assets/coin.png" alt="coin" width="23px" />
           </div>
           <div class="bg-[#00A63E] px-8 py-3 text-white rounded-[50px]">
-            <h3><span>2</span> Copy</h3>
+            <h3><span id="copy_mobile">0</span> Copy</h3>
           </div>
         </section>
       </nav>
@@ -98,7 +98,10 @@
       class="max-w-[1400px] mx-auto grid lg:grid-cols-12 pt-22 pb-14 px-6 lg:px-0"
     >
       <!-- all cart container  -->
-      <section class="card_container lg:col-span-9 grid lg:grid-cols-3 gap-6">
+      <section
+        id="card_container"
+        class="lg:col-span-9 grid lg:grid-cols-3 gap-6"
+      >
         <!-- single cart here ... -->
         <div class="bg-white p-5 rounded-xl drop-shadow-md">
           <div class="flex justify-between items-center">
@@ -109,17 +112,17 @@
               ><i class="white_heart fa-regular fa-heart cursor-pointer"></i
             ></span>
           </div>
-          <h3 class="text-[22px] font-bold mt-4" id="title_1">
+          <h3 class="text-[22px] font-bold mt-4 cart_title">
             National Emergency Number
           </h3>
           <p class="text-[18px] text-gray-500">National Emergency</p>
-          <h4 class="text-3xl font-semibold mt-6 mb-1" id="number_1">555</h4>
+          <h4 class="text-3xl font-semibold mt-6 mb-1 cart_emergency">555</h4>
           <div class="bg-gray-200 inline px-4 py-2 rounded-2xl">
             <span class="text-gray-500">All</span>
           </div>
           <div class="mt-8 flex gap-2">
             <button
-              class="border-2 border-gray-200 py-2 px-9 rounded-[8px] flex items-center gap-2 cursor-pointer"
+              class="border-2 border-gray-200 py-2 px-9 rounded-[8px] flex items-center gap-2 cursor-pointer hover:bg-black hover:text-white cart_copy"
             >
               <i class="fa-regular fa-copy"></i>Copy
             </button>
@@ -140,7 +143,9 @@
               ><i class="white_heart fa-regular fa-heart cursor-pointer"></i
             ></span>
           </div>
-          <h3 class="text-[22px] font-bold mt-4">Police Helpline Number</h3>
+          <h3 class="text-[22px] font-bold mt-4 cart_title">
+            Police Helpline Number
+          </h3>
           <p class="text-[18px] text-gray-500">Police</p>
           <h4 class="text-3xl font-semibold mt-6 mb-1">999</h4>
           <div class="bg-gray-200 inline px-4 py-2 rounded-2xl">
@@ -148,7 +153,7 @@
           </div>
           <div class="mt-8 flex gap-2">
             <button
-              class="border-2 border-gray-200 py-2 px-9 rounded-[8px] flex items-center gap-2 cursor-pointer"
+              class="border-2 border-gray-200 py-2 px-9 rounded-[8px] flex items-center gap-2 cursor-pointer hover:bg-black hover:text-white cart_copy"
             >
               <i class="fa-regular fa-copy"></i>Copy
             </button>
@@ -163,17 +168,15 @@
         <div class="bg-white p-5 rounded-xl drop-shadow-md">
           <div class="flex justify-between items-center">
             <div class="bg-[#FFE3E2] p-3 rounded-2xl">
-              <img
-                src="./assets/fire-service.png"
-                alt="emergency"
-                width="24px"
-              />
+              <img src="./assets/ambulance.png" alt="emergency" width="24px" />
             </div>
             <span
               ><i class="white_heart fa-regular fa-heart cursor-pointer"></i
             ></span>
           </div>
-          <h3 class="text-[22px] font-bold mt-4">Ambulance Service</h3>
+          <h3 class="text-[22px] font-bold mt-4 cart_title">
+            Ambulance Service
+          </h3>
           <p class="text-[18px] text-gray-500">Ambulance</p>
           <h4 class="text-3xl font-semibold mt-6 mb-1">1994-999999</h4>
           <div class="bg-gray-200 inline px-4 py-2 rounded-2xl">
@@ -181,7 +184,7 @@
           </div>
           <div class="mt-8 flex gap-2">
             <button
-              class="border-2 border-gray-200 py-2 px-9 rounded-[8px] flex items-center gap-2 cursor-pointer"
+              class="border-2 border-gray-200 py-2 px-9 rounded-[8px] flex items-center gap-2 cursor-pointer hover:bg-black hover:text-white cart_copy"
             >
               <i class="fa-regular fa-copy"></i>Copy
             </button>
@@ -206,7 +209,9 @@
               ><i class="white_heart fa-regular fa-heart cursor-pointer"></i
             ></span>
           </div>
-          <h3 class="text-[22px] font-bold mt-4">Fire Service Number</h3>
+          <h3 class="text-[22px] font-bold mt-4 cart_title">
+            Fire Service Number
+          </h3>
           <p class="text-[18px] text-gray-500">Fire Service</p>
           <h4 class="text-3xl font-semibold mt-6 mb-1">888</h4>
           <div class="bg-gray-200 inline px-4 py-2 rounded-2xl">
@@ -214,7 +219,7 @@
           </div>
           <div class="mt-8 flex gap-2">
             <button
-              class="border-2 border-gray-200 py-2 px-9 rounded-[8px] flex items-center gap-2 cursor-pointer"
+              class="border-2 border-gray-200 py-2 px-9 rounded-[8px] flex items-center gap-2 cursor-pointer hover:bg-black hover:text-white cart_copy"
             >
               <i class="fa-regular fa-copy"></i>Copy
             </button>
@@ -239,7 +244,9 @@
               ><i class="white_heart fa-regular fa-heart cursor-pointer"></i
             ></span>
           </div>
-          <h3 class="text-[22px] font-bold mt-4">Women & Child Helpline</h3>
+          <h3 class="text-[22px] font-bold mt-4 cart_title">
+            Women & Child Helpline
+          </h3>
           <p class="text-[18px] text-gray-500">Women & Child Helpline</p>
           <h4 class="text-3xl font-semibold mt-6 mb-1">109</h4>
           <div class="bg-gray-200 inline px-4 py-2 rounded-2xl">
@@ -247,7 +254,7 @@
           </div>
           <div class="mt-8 flex gap-2">
             <button
-              class="border-2 border-gray-200 py-2 px-9 rounded-[8px] flex items-center gap-2 cursor-pointer"
+              class="border-2 border-gray-200 py-2 px-9 rounded-[8px] flex items-center gap-2 cursor-pointer hover:bg-black hover:text-white cart_copy"
             >
               <i class="fa-regular fa-copy"></i>Copy
             </button>
@@ -272,7 +279,7 @@
               ><i class="white_heart fa-regular fa-heart cursor-pointer"></i
             ></span>
           </div>
-          <h3 class="text-[22px] font-bold mt-4">
+          <h3 class="text-[22px] font-bold mt-4 cart_title">
             Bangladesh Railway Helpline
           </h3>
           <p class="text-[18px] text-gray-500">Bangladesh Railway</p>
@@ -282,7 +289,7 @@
           </div>
           <div class="mt-8 flex gap-2">
             <button
-              class="border-2 border-gray-200 py-2 px-9 rounded-[8px] flex items-center gap-2 cursor-pointer"
+              class="border-2 border-gray-200 py-2 px-9 rounded-[8px] flex items-center gap-2 cursor-pointer hover:bg-black hover:text-white cart_copy"
             >
               <i class="fa-regular fa-copy"></i>Copy
             </button>
@@ -305,7 +312,7 @@
           </div>
           <button
             class="bg-green-600 px-5 py-2 text-white rounded-4xl cursor-pointer"
-            id="clear"
+            id="cart_clear"
           >
             Clear
           </button>
