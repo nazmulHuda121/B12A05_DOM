@@ -50,4 +50,18 @@ document
       historyContainer.append(createDiv);
       alert(`\u{1F4DE}calling ${cartTitle} ${cartEmargency}...`);
     }
+    // Counting copy and copy the text
+    if (e.target.className.includes('cart_copy')) {
+      const button = document.getElementById('copy').innerText;
+      const countCopy = Number(button) + 1;
+
+      document.getElementById('copy').innerText = countCopy;
+
+      // copy text
+      const text = target.parentNode.parentNode.children[3].innerText;
+
+      navigator.clipboard.writeText(text).then(() => {
+        alert('Copied: ' + text);
+      });
+    }
   });
