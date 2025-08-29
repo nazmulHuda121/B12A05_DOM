@@ -43,11 +43,12 @@ document
     if (e.target.className.includes('cart_btn')) {
       const totalCoin = document.getElementById('coins').innerText;
       if (totalCoin < 20) {
-        alert('⚠️ Not enough coins to make a call!');
+        alert('Not enough coins to make a call!');
         return;
       }
       const remainCoin = Number(totalCoin) - 20;
       document.getElementById('coins').innerText = remainCoin;
+      document.getElementById('coins_mobile').innerText = remainCoin;
 
       const historyContainer = document.getElementById('history_container');
       const createDiv = document.createElement('div');
