@@ -17,6 +17,11 @@ function getCurrentTimeString() {
   return `${hours}:${minutes}:${seconds}`;
 }
 
+// Clear History
+function clearHistory() {
+  document.getElementById('history_container').innerHTML = '';
+}
+
 ///-------------------------------------#####---------------------------------///
 
 document
@@ -50,6 +55,7 @@ document
       historyContainer.append(createDiv);
       alert(`\u{1F4DE}calling ${cartTitle} ${cartEmargency}...`);
     }
+
     // Counting copy and copy the text
     if (e.target.className.includes('cart_copy')) {
       const button = document.getElementById('copy').innerText;
